@@ -1,0 +1,76 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "UserLifecycle",
+			"Effect": "Allow",
+			"Action": [
+				"iam:CreateUser",
+				"iam:DeleteUser",
+				"iam:GetUser",
+				"iam:ListUsers",
+				"iam:TagUser",
+				"iam:UntagUser",
+				"iam:CreateLoginProfile",
+				"iam:DeleteLoginProfile",
+				"iam:DeleteUserPermissionsBoundary"
+			],
+			"Resource": "*"
+		},
+		{
+			"Sid": "GroupLifecycle",
+			"Effect": "Allow",
+			"Action": [
+				"iam:CreateGroup",
+				"iam:GetGroup",
+				"iam:ListGroups",
+				"iam:ListGroupsForUser",
+				"iam:AddUserToGroup",
+				"iam:RemoveUserFromGroup"
+			],
+			"Resource": "*"
+		},
+		{
+			"Sid": "PolicyCleanup",
+			"Effect": "Allow",
+			"Action": [
+				"iam:ListAttachedUserPolicies",
+				"iam:DetachUserPolicy",
+				"iam:ListUserPolicies",
+				"iam:DeleteUserPolicy"
+			],
+			"Resource": "*"
+		},
+		{
+			"Sid": "AccessKeyCleanup",
+			"Effect": "Allow",
+			"Action": [
+				"iam:ListAccessKeys",
+				"iam:DeleteAccessKey"
+			],
+			"Resource": "*"
+		},
+		{
+			"Sid": "SSHCertServiceCredsCleanup",
+			"Effect": "Allow",
+			"Action": [
+				"iam:ListSSHPublicKeys",
+				"iam:DeleteSSHPublicKey",
+				"iam:ListSigningCertificates",
+				"iam:DeleteSigningCertificate",
+				"iam:ListServiceSpecificCredentials",
+				"iam:DeleteServiceSpecificCredential"
+			],
+			"Resource": "*"
+		},
+		{
+			"Sid": "MFADiagnostics",
+			"Effect": "Allow",
+			"Action": [
+				"iam:ListMFADevices",
+				"iam:DeactivateMFADevice"
+			],
+			"Resource": "*"
+		}
+	]
+}

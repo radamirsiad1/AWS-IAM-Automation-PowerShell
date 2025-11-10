@@ -1,0 +1,4 @@
+FirstName,LastName,UserName,Department,Action
+Alice,Johnson,alice.johnson,Finance,Create
+Bob,Miller,bob.miller,IT,Create
+Eve,Smith,eve.smith,HR,Delete
