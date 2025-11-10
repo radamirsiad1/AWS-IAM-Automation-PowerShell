@@ -11,18 +11,17 @@ It provisions new IAM users, assigns them to departmental groups, and safely dep
 
 A complete step-by-step PDF guide (with screenshots) is included below:
 
-📘 [Provisioning & Deprovisioning AWS User Groups Using PowerShell Scripts (PDF)](./Provisioning%20%26%20Deprovisioning%20AWS%20user%20groups%20using%20PowerShell%20scripts.pdf)
+📘 [Provisioning & Deprovisioning AWS User Groups Using PowerShell Scripts (PDF)](./Provisioning_Deprovisioning_AWS_PowerShell.pdf)
 
----
 
 ## 🧰 Repository Structure
 
 | File | Description |
 |------|--------------|
-| [`provisioning.ps1`](./provisioning.ps1) | Main PowerShell automation script for creating and deleting IAM users. |
-| [`users.csv`](./users.csv) | Sample CSV file defining user accounts, departments, and actions (Create/Delete). |
-| [`IAMUserProvisionPolicy.txt`](./IAMUserProvisionPolicy.txt) | JSON IAM policy granting least-privilege access for provisioning automation. |
-| [`Provisioning & Deprovisioning AWS user groups using PowerShell scripts.pdf`](./Provisioning%20%26%20Deprovisioning%20AWS%20user%20groups%20using%20PowerShell%20scripts.pdf) | Full documentation guide with instructions and screenshots. |
+| [`provisioning.ps1`](./provisioning.ps1)  Main PowerShell automation script for creating and deleting IAM users. |
+| [`users.csv`](./users.csv)   Sample CSV file defining user accounts, departments, and actions (Create/Delete). |
+| [`IAMUserProvisionPolicy.txt`](./IAMUserProvisionPolicy.txt)  JSON IAM policy granting least-privilege access for provisioning automation. |
+| [`Provisioning & Deprovisioning AWS user groups using PowerShell scripts.pdf`](Provisioning%20%26%20Deprovisioning%20AWS%20user%20groups%20using%20PowerShell%20scripts.pdf | Full documentation guide with instructions and screenshots. |
 
 ---
 
