@@ -1,50 +1,50 @@
 # AWS-IAM-Automation-PowerShell
 Automated AWS IAM user provisioning and deprovisioning using PowerShell (macOS compatible). Includes CSV-based input, secure cleanup logic for IAM entities, and a step-by-step guide for setting up IAM permissions, JSON policy configuration, and automation execution.
-# 🧩 Automating AWS IAM User Provisioning & Deprovisioning Using PowerShell
+# 🧩 AWS IAM Automation using PowerShell
 
-This repository demonstrates a fully automated solution for **AWS Identity and Access Management (IAM)** user lifecycle management using **PowerShell**.  
-It provisions new IAM users, assigns them to departmental groups, and safely deprovisions users by removing all related IAM entities before deletion.
-
----
-
-## 📄 Documentation
-
-A complete step-by-step PDF guide (with screenshots) is included below:
-
-📘 [Provisioning & Deprovisioning AWS User Groups Using PowerShell Scripts (PDF)](./Provisioning_Deprovisioning_AWS_PowerShell.pdf)
-
-
-## 🧰 Repository Structure
-
-| File | Description |
-|------|--------------|
-| [`provisioning.ps1`](./provisioning.ps1)  Main PowerShell automation script for creating and deleting IAM users. |
-| [`users.csv`](./users.csv)   Sample CSV file defining user accounts, departments, and actions (Create/Delete). |
-| [`IAMUserProvisionPolicy.txt`](./IAMUserProvisionPolicy.txt)  JSON IAM policy granting least-privilege access for provisioning automation. |
-| [`Provisioning & Deprovisioning AWS user groups using PowerShell scripts.pdf`](Provisioning%20%26%20Deprovisioning%20AWS%20user%20groups%20using%20PowerShell%20scripts.pdf | Full documentation guide with instructions and screenshots. |
+This project demonstrates how to automate **user provisioning and deprovisioning** in AWS Identity and Access Management (IAM) using **PowerShell scripts** and a **CSV-driven approach**.  
+The automation simulates real-world IAM workflows such as user creation, group assignment, and removal, providing a practical understanding of how AWS IAM can be managed programmatically.
 
 ---
 
-## ⚙️ How It Works
+## 📘 Project Overview
 
-1. **Input**: Reads `users.csv` containing user info and desired action.  
-2. **Provisioning**:
-   - Creates IAM users and departmental groups.
-   - Assigns tags for Department, CreatedBy, and Name fields.
-   - Optionally creates login profiles for console access.
-3. **Deprovisioning**:
-   - Removes users from all groups.
-   - Detaches all IAM policies and deletes access keys, SSH keys, certificates, and MFA devices.
-   - Deletes the IAM user safely, ensuring no linked resources remain.
-4. **Logging**:
-   - Creates a transcript log in `~/Downloads/provisioning_log.txt` for audit tracking.
+The project automates:
+- Creating and deleting IAM users in AWS.
+- Assigning users to department-based groups (e.g., Finance, IT, HR).
+- Reading all user actions from a CSV file.
+- Logging actions and results for audit tracking.
+
+This was tested successfully using **PowerShell on macOS** and the **AWS.Tools** PowerShell modules.
 
 ---
 
-## 🧾 Example CSV Format
+## 🛠️ Technologies Used
 
-```csv
-FirstName,LastName,UserName,Department,Action
-Alice,Johnson,alice.johnson,Finance,Create
-Bob,Miller,bob.miller,IT,Create
-Eve,Smith,eve.smith,HR,Delete
+- **AWS IAM (Identity and Access Management)**
+- **PowerShell 7+**
+- **AWS.Tools.Common** and **AWS.Tools.IdentityManagement** modules
+- **CSV input file** for user provisioning actions
+- **JSON IAM policy** for permission management
+
+---
+
+## 📂 Project Files
+
+| File Name | Description |
+|------------|-------------|
+| [`provisioning.ps1`](./provisioning.ps1) | Main PowerShell script that provisions and deprovisions IAM users based on CSV input. |
+| [`users.csv`](./users.csv) | Contains user data (first name, last name, username, department, and action). |
+| [`IAMUserProvisionPolicy.txt`](./IAMUserProvisionPolicy.txt) | IAM policy allowing PowerShell to perform create/delete actions in AWS. |
+| [📘 **Project Guide (PDF)**](./Provisioning%20%26%20Deprovisioning%20AWS%20user%20groups%20using%20PowerShell%20scripts.pdf) | Full documentation and screenshots on how to replicate this setup. |
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ **Install PowerShell AWS Modules**
+Run the following commands to install the required AWS PowerShell tools:
+
+```powershell
+Install-Module AWS.Tools.Common -Scope CurrentUser -Force
+Install-Module AWS.Tools.IdentityManagement -Scope CurrentUser -Force
