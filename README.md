@@ -20,14 +20,14 @@ This was tested successfully using **PowerShell on macOS** and the **AWS.Tools**
 ##  Technologies Used
 
 - **AWS IAM (Identity and Access Management)**
-- **PowerShell 7+**
+- **PowerShell +**
 - **AWS.Tools.Common** and **AWS.Tools.IdentityManagement** modules
 - **CSV input file** for user provisioning actions
 - **JSON IAM policy** for permission management
 
 ---
 
-## 📂 Project Files
+##  Project Files
 
 | File Name | Description |
 |------------|-------------|
