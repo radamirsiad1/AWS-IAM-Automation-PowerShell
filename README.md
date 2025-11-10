@@ -39,12 +39,3 @@ This was tested successfully using **PowerShell on macOS** and the **AWS.Tools**
 | [📘 **Project Guide (PDF)**](./Provisioning%20%26%20Deprovisioning%20AWS%20user%20groups%20using%20PowerShell%20scripts.pdf) | Full documentation and screenshots on how to replicate this setup. |
 
 ---
-
-## ⚙️ Setup Instructions
-
-### 1️⃣ **Install PowerShell AWS Modules**
-Run the following commands to install the required AWS PowerShell tools:
-
-```powershell
-Install-Module AWS.Tools.Common -Scope CurrentUser -Force
-Install-Module AWS.Tools.IdentityManagement -Scope CurrentUser -Force
