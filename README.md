@@ -1,11 +1,11 @@
-#  AWS IAM Automation using PowerShell
+  AWS IAM Automation using PowerShell
 
 This project demonstrates how to automate **user provisioning and deprovisioning** in AWS Identity and Access Management (IAM) using **PowerShell scripts** and a **CSV-driven approach**.  
 The automation simulates real-world IAM workflows such as user creation, group assignment, and removal, providing a practical understanding of how AWS IAM can be managed programmatically.
 
 ---
 
-##  Project Overview
+  Project Overview
 
 The project automates:
 - Creating and deleting IAM users in AWS.
@@ -17,7 +17,7 @@ This was tested successfully using **PowerShell on macOS** and the **AWS.Tools**
 
 ---
 
-##  Technologies Used
+  Technologies Used
 
 - **AWS IAM (Identity and Access Management)**
 - **PowerShell +**
@@ -27,7 +27,7 @@ This was tested successfully using **PowerShell on macOS** and the **AWS.Tools**
 
 ---
 
-##  Project Files
+  Project Files
 
 | File Name | Description |
 |------------|-------------|
